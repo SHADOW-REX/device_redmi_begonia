@@ -174,7 +174,7 @@ PRODUCT_PACKAGES += \
     libnetutils.vendor
 
 # Light
-PRODUCT_PACKAGE += \
+PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
 # Media
