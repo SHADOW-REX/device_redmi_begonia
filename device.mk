@@ -380,6 +380,7 @@ PRODUCT_COPY_FILES += \
 # WiFi
 PRODUCT_PACKAGES += \
     hostapd \
+    wpa_supplicant \
     libwifi-hal-wrapper \
     android.hardware.wifi@1.0.vendor \
     android.hardware.wifi@1.1.vendor \
@@ -387,10 +388,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.3.vendor \
     android.hardware.wifi@1.4.vendor \
     android.hardware.wifi@1.5.vendor \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor \
     WifiResOverlay
 
 PRODUCT_PACKAGES += \
