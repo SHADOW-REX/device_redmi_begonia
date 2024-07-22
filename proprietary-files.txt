@@ -681,6 +681,7 @@ vendor/etc/tianma_fhd_nt36672a_dsi_vdo_lcm_drv_mi.xml
 system_ext/lib64/drm/cta/libdrmctaplugin.so
 system_ext/lib64/libdrmmtkutil.so
 system_ext/lib64/libdrmmtkwhitelist.so
+vendor/lib/liboemcrypto.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/libwvkeybox.so
