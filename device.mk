@@ -362,6 +362,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtextclassifier_hash.vendor
 
+# Update
+PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek-legacy
