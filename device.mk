@@ -114,6 +114,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl:64 \
     android.hardware.drm-service.clearkey
 
+PRODUCT_PACKAGES += \
+    libcrypto-v33
+
 # FM Radio
 PRODUCT_PACKAGES += \
     MtkFMRadio

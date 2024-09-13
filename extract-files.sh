@@ -93,6 +93,9 @@ function blob_fixup {
         vendor/lib64/libwifi-hal-mtk.so)
             "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
             ;;
+        vendor/lib/libwvhidl.so)
+            "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+            ;;
     esac
 }
 
