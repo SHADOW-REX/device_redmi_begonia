@@ -60,16 +60,14 @@ function blob_fixup {
         vendor/bin/hw/android.hardware.lights-service.mediatek)
             "${PATCHELF}" --replace-needed "android.hardware.light-V1-ndk_platform.so" "android.hardware.light-V1-ndk.so" "${2}"
             ;;
-        vendor/lib64/libudf.so)
-            "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
-            ;;
-        vendor/lib64/libmtkcam_stdutils.so)
+        vendor/lib/hw/audio.primary.mt6785.so | vendor/lib64/hw/audio.primary.mt6785.so)
+            "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
+    	    ;;
+        vendor/lib/libmtkcam_stdutils.so | vendor/lib64/libmtkcam_stdutils.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
             ;;
-        vendor/lib/hw/audio.primary.mt6785.so)
-            ;&
-        vendor/lib64/hw/audio.primary.mt6785.so)
-            "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
+        vendor/lib/libudf.so | vendor/lib64/libudf.so)
+            "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
             ;;
         vendor/lib64/hw/dfps.mt6785.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
@@ -86,16 +84,12 @@ function blob_fixup {
         vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;
-        vendor/bin/mnld)
-            ;&
-        vendor/lib64/libaalservice.so)
-            ;&
-        vendor/lib64/libcam.utils.sensorprovider.so)
+        vendor/bin/mnld | vendor/lib64/libaalservice.so | vendor/lib64/libcam.utils.sensorprovider.so)
             grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
         vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
             "${PATCHELF}" --add-needed "libshim_beanpod.so" "${2}"
-	    ;;
+	        ;;
         vendor/lib64/libwifi-hal-mtk.so)
             "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
             ;;
