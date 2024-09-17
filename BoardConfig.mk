@@ -33,6 +33,11 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
+# Audio - USB Accessories
+SOONG_CONFIG_NAMESPACES += android_hardware_mediatek_usb
+SOONG_CONFIG_android_hardware_mediatek_usb += audio_accessory_supported
+SOONG_CONFIG_android_hardware_mediatek_usb_audio_accessory_supported := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := begonia
 TARGET_NO_BOOTLOADER := true
