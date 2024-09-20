@@ -11,7 +11,6 @@ vendor/lib64/libudf.so
 # Audio
 system_ext/lib/vendor.mediatek.hardware.audio@6.1.so
 system_ext/lib64/vendor.mediatek.hardware.audio@6.1.so
-vendor/lib/libalsautils.so
 vendor/lib/libMtkSpeechEnh.so
 
 vendor/lib/lib_iir.so
@@ -37,16 +36,15 @@ vendor/lib/libmsbc_mtk.so
 vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libtinyxml.so
-vendor/lib64/libalsautils.so
 vendor/lib/libvow_ap_testing.vendor.so
 vendor/lib/libvowp23_sid_testing.vendor.so
 vendor/lib/libvowp23_sid_training.vendor.so
 vendor/lib/libvowp25testing.vendor.so
 vendor/lib/libvowp2training.vendor.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
-vendor/lib64/hw/audio.primary.mt6785.so
+vendor/lib/libalsautils.so:vendor/lib/libalsautils-v31.so
+vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so
 vendor/lib64/hw/audio.r_submix.mt6785.so
-vendor/lib64/hw/audio.usb.mt6785.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
 vendor/lib64/lib_speech_enh.so
@@ -83,9 +81,13 @@ vendor/bin/audiocmdservice_atci
 vendor/etc/init/audiocmdservice_atci.rc
 
 # Audio Hardware - from mtk android-13.0.0_r16
-vendor/lib/hw/audio.primary.mt6785.so|f51ba0df90f3e74d51cef8c041eab4308d77c31c
 vendor/lib/hw/audio.r_submix.mt6785.so|ce142652e98bbe95ab09b2d0073825cfe6984f98
-vendor/lib/hw/audio.usb.mt6785.so|280239974813303ad03963d4f528fcb14d1c2138
+
+# Audio Hardware - patched by stock libalsautils
+vendor/lib/hw/audio.primary.mt6785.so|32365d138f721420378b1e3e50932067fd56c361
+vendor/lib64/hw/audio.primary.mt6785.so|6700ebb3e62a65a3bdbd2de16d1f1186a13c361c
+vendor/lib/hw/audio.usb.mt6785.so|140385874173aaf27379dd296519b97285ca1b99
+vendor/lib64/hw/audio.usb.mt6785.so|5e179c949d7b0e862908b347015afbf954a57658
 
 # Bluetooth
 system_ext/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
