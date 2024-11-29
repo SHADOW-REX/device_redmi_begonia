@@ -1007,8 +1007,8 @@ vendor/lib64/libstagefrighthw.so|df56a53d5c3dba7fe59bc219dad2b23a648c4cd8
 vendor/lib64/libwlparser.so|211ecad772588451bcaf3e66d1b582d92c66e1dd
 vendor/lib64/libwlservice.so|5e44d3cd4f5d0912e4829444af58d7bff51fc43a
 
-# Media OMX - from begonia V12.5.8.0.RGGMIXM
-vendor/lib/libMtkOmxVdecEx.so|d5c8bede3ab2718bd4d910de3aa1d9ef453ae169
+# Media OMX - Patch for A14 QPR3
+vendor/lib/libMtkOmxVdecEx.so|23c376d87306192347a02efd7ee2f12927e88ac0
 
 # MediaTek Modules
 vendor/etc/init/init.bt_drv.rc

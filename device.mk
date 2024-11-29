@@ -291,6 +291,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 PRODUCT_PACKAGES += \
+    libui_shim \
     libui_shim.vendor
 
 # MTK In-Call volumes adjusting service
