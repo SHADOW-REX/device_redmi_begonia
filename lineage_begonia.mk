@@ -51,8 +51,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="begonia-user 11 RP1A.200720.011 V12.5.8.0.RGGMIXM release-keys" \
     DeviceName="begonia" \
-    RISING_CHIPSET="MTK Helios G90T" \
-    RISING_MAINTAINER="SHADOW"
+    RisingChipset="MTK Helios G90T" \
+    RisingMaintainer="SHADOW"
 
 BUILD_FINGERPRINT := "Redmi/begonia/begonia:11/RP1A.200720.011/V12.5.8.0.RGGMIXM:user/release-keys"
 

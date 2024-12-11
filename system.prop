@@ -1,3 +1,6 @@
+# ADB
+adb.secure=0
+
 # Audio
 ro.audio.silent=0
 ro.config.vc_call_vol_steps=7

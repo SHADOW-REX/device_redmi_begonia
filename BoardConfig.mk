@@ -16,7 +16,7 @@
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-DEVICE_PATH := device/redmi/begonia
+DEVICE_PATH := device/xiaomi/begonia
 
 # Architecture
 TARGET_ARCH := arm64
@@ -142,7 +142,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/framework_compatibility_matrix.xml \
-    vendor/derp/config/device_framework_matrix.xml
+    vendor/lineage/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 ODM_MANIFEST_SKUS += \
@@ -176,4 +176,4 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 
 # Inherit from the proprietary version
-include vendor/redmi/begonia/BoardConfigVendor.mk
+include vendor/xiaomi/begonia/BoardConfigVendor.mk
