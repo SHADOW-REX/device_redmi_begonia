@@ -57,9 +57,6 @@ function blob_fixup {
         system_ext/lib64/libsource.so | vendor/lib/libMtkOmxVdecEx.so)
             grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
-        vendor/bin/hw/android.hardware.lights-service.mediatek)
-            "${PATCHELF}" --replace-needed "android.hardware.light-V1-ndk_platform.so" "android.hardware.light-V1-ndk.so" "${2}"
-            ;;
         vendor/lib/hw/audio.primary.mt6785.so | vendor/lib64/hw/audio.primary.mt6785.so)
             "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "${2}"
             "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"

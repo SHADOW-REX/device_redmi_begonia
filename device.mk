@@ -173,10 +173,6 @@ PRODUCT_PACKAGES += \
     libshim_beanpod.vendor \
     libnetutils.vendor
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-V1-ndk.vendor
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
