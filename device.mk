@@ -88,6 +88,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
+# Debloat
+PRODUCT_PACKAGES += \
+    Debloat
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0.vendor \
