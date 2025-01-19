@@ -7,7 +7,7 @@
 
 set -e
 
-VENDOR=redmi
+VENDOR=xiaomi
 DEVICE=begonia
 
 # Load extract_utils and do some sanity checks
@@ -24,7 +24,7 @@ fi
 source "${HELPER}"
 
 # Default to sanitizing the vendor folder before extraction
-CLEAN_VENDOR=true
+CLEAN_VENDOR=false
 
 KANG=
 SECTION=

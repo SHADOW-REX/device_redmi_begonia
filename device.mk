@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Debloat
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0.vendor \
@@ -123,7 +127,7 @@ PRODUCT_PACKAGES += \
     libcrypto-v33
 
 # FM Radio
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
     MtkFMRadio
 
 # Gatekeeper
@@ -476,6 +480,10 @@ PRODUCT_PACKAGES += \
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.mt6785.rc
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1.vendor
 
 # Inherit vendor
 $(call inherit-product, vendor/xiaomi/begonia/begonia-vendor.mk)

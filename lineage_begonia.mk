@@ -36,10 +36,14 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # disable/enable blur support
 TARGET_ENABLE_BLUR := true
+
 # Aperture Camera
 PRODUCT_NO_CAMERA := true
 
-## Device identifier. This must come after all inclusions
+# Ship lawnchair launcher
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
 PRODUCT_NAME := lineage_begonia
 PRODUCT_BRAND := Redmi
