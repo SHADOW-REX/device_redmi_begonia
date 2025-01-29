@@ -23,6 +23,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Audio
+TARGET_EXCLUDES_AUDIOFX := true
+
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0.vendor \
     android.hardware.audio.service \
@@ -95,6 +97,9 @@ PRODUCT_PACKAGES += \
 # Dolby
 PRODUCT_PACKAGES += \
     XiaomiDolby
+
+# Enable codec support
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml

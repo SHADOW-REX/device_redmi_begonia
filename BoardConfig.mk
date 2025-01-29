@@ -42,6 +42,11 @@ SOONG_CONFIG_android_hardware_mediatek_usb_audio_accessory_supported := true
 TARGET_BOOTLOADER_BOARD_NAME := begonia
 TARGET_NO_BOOTLOADER := true
 
+# Dolby
+USE_CUSTOM_AUDIO_POLICY := 1
+AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := true
+TARGET_PROVIDES_AUDIO_EXTNS := true
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6785
 BOARD_HAS_MTK_HARDWARE := true
