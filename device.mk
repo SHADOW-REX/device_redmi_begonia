@@ -86,10 +86,6 @@ PRODUCT_PACKAGES += \
    liblz4.vendor \
    libcamera_metadata.vendor
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Debloat
 PRODUCT_PACKAGES += \
     Debloat

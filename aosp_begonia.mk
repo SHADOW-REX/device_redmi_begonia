@@ -14,8 +14,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from begonia device
 $(call inherit-product, device/xiaomi/begonia/device.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelOS Studd
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit some extras stuff
 $(call inherit-product-if-exists, vendor/extras/extras.mk)
@@ -37,15 +37,15 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # disable/enable blur support
 TARGET_ENABLE_BLUR := true
 
-# Aperture Camera
-PRODUCT_NO_CAMERA := true
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
 
-# Ship lawnchair launcher
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+# PixelOS flags
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
-PRODUCT_NAME := lineage_begonia
+PRODUCT_NAME := aosp_begonia
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 8 Pro
 PRODUCT_MANUFACTURER := Xiaomi
@@ -54,9 +54,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="begonia-user 11 RP1A.200720.011 V12.5.8.0.RGGMIXM release-keys" \
-    DeviceName="begonia" \
-    RisingChipset="MTK Helios G90T" \
-    RisingMaintainer="SHADOW"
+    DeviceName="begonia"
 
 BUILD_FINGERPRINT := "Redmi/begonia/begonia:11/RP1A.200720.011/V12.5.8.0.RGGMIXM:user/release-keys"
 
