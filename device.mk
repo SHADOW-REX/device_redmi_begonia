@@ -87,7 +87,7 @@ PRODUCT_PACKAGES += \
    libcamera_metadata.vendor
 
 # Debloat
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
     Debloat
 
 # Dolby
@@ -397,10 +397,6 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek-legacy
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.mediatek
 
 # VNDK
 PRODUCT_COPY_FILES += \
